@@ -3,13 +3,13 @@ import pathlib
 
 ruta = str(pathlib.Path().absolute()) + "/fichero.txt"
 
-# Crear archivo
+# Crear archivo, permiso a+
 # archivo = open("fichero.txt","a+")
 
 # Escribir archivo
 # archivo.write("Escribiendo un archivo... \n")
 
-# Leer archivo
+# Leer archivo, permiso r
 archivo = open("fichero.txt","r")
 # .read devuelve un string
 #lectura = archivo.read()
