@@ -36,4 +36,15 @@ rutaNueva = str(pathlib.Path().absolute()) + "/fichero-copia.txt"
 
 # Mover archivo
 rutaAMover = str(pathlib.Path().absolute()) + "/fichero-movido.txt"
-shutil.move(rutaNueva, rutaAMover)
+#shutil.move(rutaNueva, rutaAMover)
+
+# Eliminar
+import os
+
+file = os.path.abspath("./") + "/fichero-movido.txt"
+
+# Borramos archivo si existe
+if os.path.isfile(file):
+  os.remove(file)
+else:
+  print("El archivo no existe")
