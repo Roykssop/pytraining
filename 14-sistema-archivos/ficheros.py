@@ -1,5 +1,6 @@
 from io import open
 import pathlib  
+import shutil
 
 ruta = str(pathlib.Path().absolute()) + "/fichero.txt"
 
@@ -28,3 +29,7 @@ for linea in ficheroEnLista:
 
 # Cerrar archivo
 archivo.close()
+
+# Copiar archivo
+rutaNueva = str(pathlib.Path().absolute()) + "/fichero-copia.txt"
+shutil.copyfile(ruta,rutaNueva)
