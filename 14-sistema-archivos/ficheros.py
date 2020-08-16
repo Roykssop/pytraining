@@ -32,4 +32,8 @@ archivo.close()
 
 # Copiar archivo
 rutaNueva = str(pathlib.Path().absolute()) + "/fichero-copia.txt"
-shutil.copyfile(ruta,rutaNueva)
+#shutil.copyfile(ruta,rutaNueva)
+
+# Mover archivo
+rutaAMover = str(pathlib.Path().absolute()) + "/fichero-movido.txt"
+shutil.move(rutaNueva, rutaAMover)
