@@ -25,5 +25,8 @@ recorreListaSimple("Lista ordenada",numlist)
 print(f"Longitud de la lista {len(numlist)}")
 
 # Buscar un elemento en base a lo que nos pida el usuario por teclado
-value = int(input("Ingrese el indice de la lista que quiere ver... :"))  
-devuelveElemento(value, numlist)
+try:
+  value = int(input("Ingrese el indice de la lista que quiere ver... :"))  
+  devuelveElemento(value, numlist)
+except:
+  print("Error")
