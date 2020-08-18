@@ -20,7 +20,7 @@ finally:
 
 """
   Manejo de múltiples errores
-"""
+
 
 # Imprimo nombre del tipo
 print(type(9).__name__)
@@ -34,3 +34,16 @@ except ValueError:
   print("Introduce un número correcto!")
 except Exception as e:
   print("Ha ocurrido unn error", type(e).__name__)
+
+"""
+
+"""
+  Lanzando excpeciones personalizadas
+"""
+try:
+  if edad < 5 or edad > 110:
+    raise ValueError("La edad introducida no es real")
+  elif len(nombre) <= 1:
+    raise ValueError("El nombre no es correcto")
+except:
+  print("Ingrese los datos correctamente")
