@@ -23,3 +23,13 @@ coche1.acelerar()
 coche1.acelerar()
 coche1.frenar()
 print(coche2.getInfo())
+
+# Detectar tipado
+if type(coche1) == Coche: 
+  print("El objeto es coche")
+
+
+# Encapsulamiento
+print(coche1.atribPublico)
+#print(coche1.__atribPrivado)
+print(coche1.getAtribPrivado())

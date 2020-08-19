@@ -5,6 +5,8 @@ class Coche:
   color="Verde"
   puertas=4
   velocidad=300
+  atribPublico = "Soy público"
+  __atribPrivado = "Soy privado"
 
   def __init__(self,marca,modelo,year,color,puertas,velocidad):
     self.marca = marca
@@ -63,3 +65,6 @@ class Coche:
       info += f"\n{key} : {val} "
     
     return info
+
+  def getAtribPrivado(self):
+    return self.__atribPrivado
