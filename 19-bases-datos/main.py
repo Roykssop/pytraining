@@ -64,3 +64,12 @@ result = cursor.fetchone()
 
 print("======= PRIMER VEHICULO =======")
 print(result[1],result[3])
+
+# Delete registro
+cursor.execute("DELETE FROM vehiculos WHERE marca='Ford'")
+print(cursor.rowcount," borrados!!")
+
+# Update registro
+cursor.execute("UPDATE vehiculos SET marca='Suzuki' WHERE marca='Renault'")
+print(cursor.rowcount,"actualizados")
+database.commit()
