@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for 
+from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ def informacion(nombre = None,dato = None):
   if(nombre != None and dato != None):
     ret = f"Parámetros: El nombre es {nombre}, y el dato requerido: {dato}"
 
-  return ret
+  return render_template('informacion.html', texto=ret)
 
 @app.route('/lenguajes-de-programacion')
 # Es válido retornar html
