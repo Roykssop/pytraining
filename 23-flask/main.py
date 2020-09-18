@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 # Asociamos el route con la función inmediatamente definida
 def index():
-  return "Aprendiendo Flask" 
+  return render_template('index.html')
 
 @app.route('/informacion/')
 @app.route('/informacion/<string:nombre>')
@@ -27,7 +27,7 @@ def lenguajes():
 @app.route('/contacto')
 @app.route('/contacto/<redireccion>')
 # Hacemos una redireccion
-def contacto(redireccion):
+def contacto(redireccion=None):
   if redireccion is not None:
     return redirect(url_for('lenguajes'))
 
