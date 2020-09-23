@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 
 @app.context_processor
+# Compartir valor a lo largo de todos los routes
 def common_func():
   return {
     'textfn': 'Esto es una función común'
@@ -13,7 +14,7 @@ def common_func():
 @app.route('/')
 # Asociamos el route con la función inmediatamente definida
 def index():
-  return render_template('index.html')
+  return render_template('index.html', edad=18)
 
 @app.route('/informacion/')
 @app.route('/informacion/<string:nombre>')

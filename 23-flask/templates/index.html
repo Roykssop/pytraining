@@ -6,4 +6,10 @@
 
 {% block content %}
   Inicio
+  <p> Tu edad es {{ edad }} </p>
+  {% if edad > 17 %}
+    <h4>Eres Mayor</h4>
+  {% else %}
+    <h4>Eres Mayor</h4>
+  {% endif %}
 {% endblock %}
