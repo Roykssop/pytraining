@@ -22,7 +22,7 @@ def informacion(nombre = None,dato = None):
 @app.route('/lenguajes-de-programacion')
 # Es válido retornar html
 def lenguajes():
-  return "<h1> Página de lenguajes</h1>"  
+  return render_template('lenguajes.html')
 
 @app.route('/contacto')
 @app.route('/contacto/<redireccion>')
@@ -31,7 +31,7 @@ def contacto(redireccion=None):
   if redireccion is not None:
     return redirect(url_for('lenguajes'))
 
-  return "<h1> Página de contacto</h1>"  
+  return render_template('contacto.html')  
 
 
 # Corremos la app en debug true
